@@ -1,9 +1,9 @@
 FROM debian:jessie
-MAINTAINER Henrrich <huanghe389@gmail.com>
+MAINTAINER "Tim Fall <tim@vapor.io>"
 
 ENV workdir /usr/local/sauce-connect
 
-ARG SC_VERSION=4.4.6
+ARG SC_VERSION=4.4.7
 
 WORKDIR ${workdir}
 
@@ -22,4 +22,3 @@ RUN chmod a+x $workdir/start.sh
 ENTRYPOINT ["/usr/local/sauce-connect/start.sh"]
 
 CMD ["--help"]
-
